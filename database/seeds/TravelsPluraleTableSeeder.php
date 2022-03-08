@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Travel;
 use Faker\Generator as Faker;
 
 class TravelsPluraleTableSeeder extends Seeder
@@ -13,9 +14,9 @@ class TravelsPluraleTableSeeder extends Seeder
     public function run(Faker $faker)
     {  
         for ($i = 0; $i < 10; $i++){
-            $travel = new Travels();
-            $travel->localita = $faker->localita;
-            $travel -> save();
+            $travel = new Travel();
+            $travel->localita = 'stringa';
+            $travel->save();
         }//chiusura ciclo for
     } //chiusura run
 }
